@@ -60,8 +60,9 @@ class RouteNet_Fermi(tf.keras.Model):
             tf.keras.layers.Dense(1, activation=tf.keras.activations.sigmoid)
         ], name="PathReadout")
 
-    @tf.function
+    # @tf.function
     def call(self, inputs):
+        import pdb;pdb.set_trace()
         traffic = inputs['traffic']
         packets = inputs['packets']
         length = inputs['length']

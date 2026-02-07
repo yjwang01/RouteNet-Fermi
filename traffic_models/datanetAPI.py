@@ -814,9 +814,11 @@ class DatanetAPI:
         q_flows = queue.Queue()
         first_params = s._results_line.split('|')[0].split(',')
         first_params = list(map(float, first_params))
+        
         s._set_global_packets(first_params[0])
         s._set_global_losses(first_params[1])
         s._set_global_delay(first_params[2])
+
         r = s._results_line[s._results_line.find('|')+1:].split(';')
         if (s._flowresults_line):
             f = s._flowresults_line.split(';')

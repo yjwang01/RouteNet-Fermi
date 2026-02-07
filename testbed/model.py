@@ -12,7 +12,7 @@ class RouteNet(tf.keras.Model):
         self.threshold = 0.05
         self.ip_op_state_dim = 64
         self.path_state_dim = 64
-        self.aggr_dropout = 0
+        self.aggr_out = 0
         self.readout_dropout = 0
 
         self.max_num_sizes = 1
